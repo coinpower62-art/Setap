@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  /* Sleek Interface palette */
+  --sleek-bg: #121212;
+  --sleek-surface: #1E1E1E;
+  --sleek-text-main: #FFFFFF;
+  --sleek-text-muted: #64748b; /* slate-500 */
+  --sleek-accent-emerald: #34d399; /* emerald-400 */
+  --sleek-accent-rose: #fb7185; /* rose-400 */
+  --sleek-border: #1e293b; /* slate-800 */
+}
+
+body {
+  background-color: #e2e8f0; /* slate-200 for external background */
+  color: var(--sleek-text-main);
+  font-family: var(--font-sans);
+  margin: 0;
+  overflow: hidden;
+}
+
+.sleek-button {
+  @apply relative overflow-hidden flex items-center justify-center transition-all duration-200 active:scale-95 cursor-pointer select-none rounded-full;
+}
+
+.sleek-number {
+  background-color: var(--sleek-surface);
+  color: var(--sleek-text-main);
+}
+
+.sleek-functional {
+  background-color: rgba(30, 41, 59, 0.5); /* bg-slate-800/50 */
+  color: var(--sleek-accent-emerald);
+}
+
+.sleek-operator {
+  background-color: rgba(30, 41, 59, 0.5); /* bg-slate-800/50 */
+  color: var(--sleek-accent-rose);
+}
+
+.sleek-equal {
+  background: linear-gradient(to bottom right, #f43f5e, #e11d48); /* rose-500 to rose-600 */
+  color: white;
+  box-shadow: 0 10px 15px -3px rgba(136, 19, 55, 0.4); /* shadow-rose-900/40 */
+}
